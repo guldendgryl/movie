@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns="sap.m" 
+    xmlns:l="sap.ui.layout" 
+    xmlns:core="sap.ui.core">
+    <Dialog class="dialog zoomIn" verticalScrolling="false">
+        <VBox class="dialog-style">
+            <HBox class="aa">
+                <Image src="{/dialogview/posterurl}" class="dialog-image"></Image>
+                <ScrollContainer height="100%" width="100%" horizontal="true" vertical="true" focusable="false">
+                    <VBox class="dialog-content">
+                        <VBox class="movie-info-style">
+                            <Text text="{/dialogview/title}" class="dialog-title-style"/>
+                            <Text text="{/dialogview/year}" class="dialog-title-style"/>
+                            <Text text="{/dialogview/genres}" class="dialog-title-style"/>
+                        </VBox>
+                        <Text text="{/dialogview/storyline}" class="dialog-storyline-style"/>
+                    </VBox>
+                </ScrollContainer>
+                <Button type="Accept" class="dialog-btn" press="onPress" icon="sap-icon://decline" ariaDescribedBy="acceptButtonDescription genericButtonDescription">
+                    <layoutData>
+                        <FlexItemData growFactor="1"/>
+                    </layoutData>
+                </Button>
+            </HBox>
+        </VBox>
+    </Dialog>
+</core:FragmentDefinition>
